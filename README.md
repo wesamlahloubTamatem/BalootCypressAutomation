@@ -120,6 +120,22 @@ Here’s an overview of the key directories and files:
 - `.dockerignore`
   - Specifies files and directories to exclude from the Docker build context.
 
+## Using Cypress Studio
+
+- Studio is enabled in the project config (experimentalStudio: true). It is an experimental GUI feature to record interactions and generate test code.
+- To use Studio:
+  1. Run the test runner: npx cypress open
+  2. Open a spec from the Test Runner (headed mode).
+  3. Click the "Studio" button in the Test Runner to start recording actions.
+  4. Interact with the app in the browser; Studio will record steps and offer generated code.
+  5. To add assertions, right‑click an element in the App or the Recorder and choose "Add assertion".
+  6. Save the generated test edits from the Studio pane when done.
+
+Notes:
+- Studio works only in the interactive Test Runner (npx cypress open), not in headless runs.
+- It's experimental — keep changes under version control and review generated code before committing.
+- If you want to disable Studio, set experimentalStudio: false in cypress.config.js.
+
 ## Notes
 
 - Ensure that you have docker desktop and it's running while executing the docker commands
