@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1735844690293' stop='1735844717104'>
+    <name>Practice Automation Task</name>
+    <title>Practice Automation Task</title>
+    <test-cases>
+        <test-case start='1735844690314' status='passed' stop='1735844701788'>
+            <name>navigate to practice automation and Assert Thinking in HTML book exist along with its price</name>
+            <title>navigate to practice automation and Assert Thinking in HTML book exist along with its price</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1735844701836' status='failed' stop='1735844710156'>
+            <name>Click on Add to Basket for Thinking in HTML book and Assert the data for item added to the cart</name>
+            <title>Click on Add to Basket for Thinking in HTML book and Assert the data for item added to the cart</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '&lt;span.cartcontents>' to have text '1 item', but the text was '0 items'</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '&lt;span.cartcontents>' to have text '1 item', but the text was '0 items'
+                    at Context.eval (https://practice.automationtesting.in/__cypress/tests?p=cypress\e2e\task.feature:18102:84)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1735844710226' status='passed' stop='1735844717104'>
+            <name>Navigate to Billing Details page and assert form displayed</name>
+            <title>Navigate to Billing Details page and assert form displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
