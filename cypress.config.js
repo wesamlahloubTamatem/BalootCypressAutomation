@@ -25,7 +25,7 @@ module.exports = defineConfig({
               '--disable-software-rasterizer',
               '--no-sandbox',
               '--disable-dev-shm-usage',
-              '--disable-features=VizDisplayCompositor' // optional stability flag among windows 
+              '--disable-features=VizDisplayCompositor' // optional stability flag for windows users
             );
           }
         } catch (e) {
