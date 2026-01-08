@@ -1,0 +1,6 @@
+[2026-01-08T11:48:05.071Z] [log] ServiceWorker - will the service worker register?
+[2026-01-08T11:48:05.074Z] [warn] ServiceWorker active {} installing null waiting null
+[2026-01-08T11:48:05.074Z] [warn] ServiceWorker is active
+[2026-01-08T11:48:05.074Z] [warn] ServiceWorker Registration Time: 2.900000035762787
+[2026-01-08T11:48:06.911Z] [log] Init sentry: tags vipbaloot production
+[2026-01-08T11:48:06.911Z] [log] Sentry extra context: device browser devicePlatform null extra {"device":"browser"}

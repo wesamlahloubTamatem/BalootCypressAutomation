@@ -1,38 +1,23 @@
 const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
 import TaskPO from "../../e2e/pageobjects/TaskPO";
 
-//User Creates a new account as a Job seeker
-Given("navigate to practice automation website", () => {
+
+Given("navigate to vip baloot qa website", () => {
   TaskPO.NavigateWebsite();
 });
 
-Then("Assert {string} book exist and has a price of {string}", (expectedBookName, expectedBookPrice) => {
-  TaskPO.AssertCardExists(expectedBookName, expectedBookPrice);
+Given("choose to login using {string} method", (method) => {
+  TaskPO.LoginUsingMethodSelection(method);
 });
 
-When("click on Add to basket for {string} book", (expectedBookName) => {
-  TaskPO.clickOnNeededBook(expectedBookName);
+When("fill the credentials with email {string} and password {string}", (email, password) => {
+  TaskPO.FillCredsEmail(email, password);
+})
+
+Then("check that the game opens and the player can see {string} lobby on the screen", (lobbyName) => {
+  TaskPO.AssertLobbyNameIsVisible(lobbyName);
 });
 
-When("click on Basket icon that has {string} which should cost {string}", (numberOfItems, PriceOfItems) => {
-  TaskPO.clickBasketIcon(numberOfItems, PriceOfItems);
-});
-
-Then("Assert added product name is {string} with quantity of {string} for the price of {string} and a total of {string}", (itemName, quantity, price, total) => {
-  TaskPO.AssertBasketDetails(itemName, quantity, price, total);
-});
-
-Then("The Basket Total should be {string} with a tax of {string} and a total of {string}", (subTotal, tax, total) => {
-  TaskPO.AssertBasketTotal(subTotal, tax, total);
-});
-
-Then("click on proceed checkout button", () => {
-  TaskPO.clickProceedToCheckout();
-});
-
-Then("form with title {string} should be displayed", (expectedTitle) => {
-  TaskPO.AssertBillingDetailsForm(expectedTitle);
-});
 
 
 
