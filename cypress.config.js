@@ -29,6 +29,6 @@ module.exports = defineConfig({
     video: true,
     videosFolder: 'cypress/videos',
     screenshotsFolder: 'cypress/screenshots',
-    trashAssetsBeforeRuns: false,  // keep videos for passed & failed
+    trashAssetsBeforeRuns: true,
   }
 });

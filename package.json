@@ -18,7 +18,7 @@
   },
   "scripts": {
     "browser:chrome": "npx cypress run --headed --browser chrome",
-    "test:allure": "cypress run --headed --browser chrome || true && allure serve allure-results",
+    "RunWithReport": "cypress run --headed --browser chrome || true && allure serve allure-results",
     "test:chrome": "cypress run --browser chrome",
     "test:electron": "cypress run --browser electron",
     "test:parallel": "npm-run-all --parallel test:chrome test:electron",
