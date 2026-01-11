@@ -8,22 +8,18 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
-    "@shelex/cypress-allure-plugin": "^2.40.2",
-    "allure-commandline": "^2.32.0",
-    "allure-cypress": "^3.0.7",
-    "mocha-allure-reporter": "^1.4.0",
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-cypress": "^5.2.1",
+    "globals": "^17.0.0",
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "browser:chrome": "npx cypress run --browser=chrome --headed --spec cypress/e2e/task.feature --reporter mocha-allure-reporter",
-    "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "browser:chrome": "npx cypress run --browser=chrome --headed --spec cypress/e2e/task.feature",
     "test:chrome": "cypress run --browser chrome",
     "test:electron": "cypress run --browser electron",
     "test:parallel": "npm-run-all --parallel test:chrome test:electron",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "allure:generate": "npx allure generate --clean -o allure-report",
-    "allure:open": "npx serve -s allure-report -l 8080",
-    "allure:report": "node scripts/allure-report.js"
+    "cypress:run": "cypress run"
   }
 }

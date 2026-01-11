@@ -1,4 +1,6 @@
+/* global cy */
 import TaskLocators from "../locators/TaskLocators";
+import LoginLocators from "../locators/loginLocators";
 
 function NavigateWebsite() {
   cy.visit("https://qa-vipbaloot.cgp.one/#/home");

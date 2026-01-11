@@ -13,5 +13,5 @@ RUN npm ci
 # Copy the rest of the project files into the container
 COPY . .
 
-# Run tests and generate Allure report
-CMD ["bash", "-lc", "npm run cypress:run && npm run allure:generate || true"]
+# Run tests
+CMD ["bash", "-lc", "npm run cypress:run"]
