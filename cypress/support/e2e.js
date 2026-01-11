@@ -15,35 +15,7 @@
 
 // Load existing commands
 import './commands';
+import "allure-cypress";
 
-// Capture browser console messages and keep them per-window/spec
-Cypress.on('window:before:load', (win) => {
-  try {
-    win.__captured_console__ = [];
-    const origConsole = win.console || {};
-    ['log', 'info', 'warn', 'error', 'debug'].forEach((level) => {
-      const orig = origConsole[level] ? origConsole[level].bind(origConsole) : () => {};
-      win.console[level] = function (...args) {
-        try {
-          const msg = args.map(a => {
-            try { return typeof a === 'string' ? a : JSON.stringify(a); } catch (e) { return String(a); }
-          }).join(' ');
-          const timestamp = new Date().toISOString();
-          win.__captured_console__.push(`[${timestamp}] [${level}] ${msg}`);
-        } catch (e) {
-          // no-op
-        }
-        return orig(...args);
-      };
-    });
-  } catch (e) {
-    // ignore
-  }
-});
 
-// Allure integration removed: no attachments are added in afterEach.
 
-// helper used above in the browser chain to sanitize names (simple inline)
-function pathSafe(p) {
-  return (p || '').replace(/[^a-zA-Z0-9_\-\.]/g, '_');
-}

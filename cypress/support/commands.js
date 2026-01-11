@@ -1,1 +1,2 @@
-// Cypress Custom commands placeholder. All Allure-related commands removed.
+// Cypress Custom commands placeholder.
+

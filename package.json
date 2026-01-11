@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "allure": "^3.0.1",
     "cypress": "^15.8.1"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
     "@eslint/js": "^9.39.2",
+    "allure-cypress": "^3.4.4",
     "eslint": "^9.39.2",
     "eslint-plugin-cypress": "^5.2.1",
     "globals": "^17.0.0",
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "browser:chrome": "npx cypress run --browser=chrome --headed --spec cypress/e2e/task.feature",
+    "browser:chrome": "npx cypress run --headed --browser chrome",
+    "test:allure": "cypress run --headed --browser chrome || true && allure serve allure-results",
     "test:chrome": "cypress run --browser chrome",
     "test:electron": "cypress run --browser electron",
     "test:parallel": "npm-run-all --parallel test:chrome test:electron",
